@@ -1,6 +1,5 @@
 const Joi = require('joi')
 const db = require('./db')
-const baseUrl = process.env.BASE_URL
 
 module.exports = [
   {
