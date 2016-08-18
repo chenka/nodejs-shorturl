@@ -10,6 +10,7 @@ function displayShortenedUrl (response) {
   link.setAttribute(
     'href', response.data.shortUrl
   )
+  copyButton.textContent = 'COPY'
   shortUrlBox.style.opacity = 1
 }
 
@@ -26,6 +27,6 @@ form.addEventListener('submit', (event) => {
 
 const clipboard = new Clipboard('#copy');
 clipboard.on('success', (e) => {
-    copyButton.innerHTML = 'copied!'
+    copyButton.textContent = 'COPIED!'
     e.clearSelection()
 });
